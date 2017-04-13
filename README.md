@@ -11,7 +11,7 @@ The project is set to run on port 8080, context /jwt.
 ## Usage
 
 Strict REST server with endpoints.  
-You can test it using the angular-jwt project for frontend.
+You can test it using the angular-jwt project for frontend.[download here](https://github.com/stefanBusnita/JWT-Angular-Setup)
 
 ## Contributing
 
