@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!-- gets logging.path from catalina.properties -->
+	<property name="DEV_HOME" value="${logging.path}" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>
+				%d{HH:mm:ss}: %-4relative %-5level %logger{35} - %msg%n
+			</Pattern>
+		</layout>
+	</appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+		<file>${DEV_HOME}/debug.log</file>
+		<encoder>
+			<Pattern>%d{HH:mm:ss}: %-4relative %-5level %logger{35} - %msg%n
+			</Pattern>
+		</encoder>
+	</appender>
+	
+	
+	<!-- Uncomment if needed in future
+	
+	<logger name="org.springframework.web" level="INFO">
+		<appender-ref ref="FILE" />
+		<appender-ref ref="STDOUT" />
+	</logger>
+	     
+    <logger name="org.springframework" level="ERROR">
+    	<appender-ref ref="FILE" />
+		<appender-ref ref="STDOUT" />
+    </logger>
+		
+	 -->
+	
+	
+	<logger name="com.jwt" level="ALL">
+		<appender-ref ref="FILE" />
+		<appender-ref ref="STDOUT" />
+	</logger>
+	
+	<root level="INFO">
+		<appender-ref ref="FILE" />
+		<appender-ref ref="STDOUT" />
+	</root>
+
+
+
+</configuration>

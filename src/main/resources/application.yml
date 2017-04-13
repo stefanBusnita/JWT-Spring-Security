@@ -1,0 +1,32 @@
+jwt:
+  tokenExpirationTime: 20 # Number of minutes
+  tokenIssuer: http://jenkins.stefanbusnita.com
+  tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
+  jwtHeaderPrefix: "Bearer "
+server:
+  contextPath: /jwt
+  port: 8080
+
+application : 
+  context : "jwt"
+  name : "Json Web Token REST Service"
+    
+crypto:
+    keySize: 128
+    iterationCount: 10
+    iv: "F27D5C9927726BCEFE7510B1BDD3D137"
+    salt: "3FF2EC019C627B945225DEBAD71A01B6985FE84C95A70EB132882F88C0A59A55"
+    passphrase: "the quick brown fox jumps over the lazy dog"
+
+spring:
+    datasource:
+      url: jdbc:h2:mem:AZ;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      driverClassName: org.h2.Driver
+      username: sa
+      password:
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+    profiles:
+      include: "messages"
+     
+    

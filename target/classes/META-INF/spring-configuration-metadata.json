@@ -1,0 +1,67 @@
+{
+  "groups": [
+    {
+      "name": "crypto",
+      "type": "com.jwt.security.auth.cryptographics.CryptoProperties",
+      "sourceType": "com.jwt.security.auth.cryptographics.CryptoProperties"
+    },
+    {
+      "name": "jwt",
+      "type": "com.jwt.security.auth.jwt.JwtSettings",
+      "sourceType": "com.jwt.security.auth.jwt.JwtSettings"
+    }
+  ],
+  "properties": [
+    {
+      "name": "crypto.iteration-count",
+      "type": "java.lang.Integer",
+      "sourceType": "com.jwt.security.auth.cryptographics.CryptoProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "crypto.iv",
+      "type": "java.lang.String",
+      "sourceType": "com.jwt.security.auth.cryptographics.CryptoProperties"
+    },
+    {
+      "name": "crypto.key-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.jwt.security.auth.cryptographics.CryptoProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "crypto.passphrase",
+      "type": "java.lang.String",
+      "sourceType": "com.jwt.security.auth.cryptographics.CryptoProperties"
+    },
+    {
+      "name": "crypto.salt",
+      "type": "java.lang.String",
+      "sourceType": "com.jwt.security.auth.cryptographics.CryptoProperties"
+    },
+    {
+      "name": "jwt.jwt-header-prefix",
+      "type": "java.lang.String",
+      "sourceType": "com.jwt.security.auth.jwt.JwtSettings"
+    },
+    {
+      "name": "jwt.token-expiration-time",
+      "type": "java.lang.Integer",
+      "description": "{@link JwtToken} will expire after this time.",
+      "sourceType": "com.jwt.security.auth.jwt.JwtSettings"
+    },
+    {
+      "name": "jwt.token-issuer",
+      "type": "java.lang.String",
+      "description": "Token issuer.",
+      "sourceType": "com.jwt.security.auth.jwt.JwtSettings"
+    },
+    {
+      "name": "jwt.token-signing-key",
+      "type": "java.lang.String",
+      "description": "Key is used to sign {@link JwtToken}.",
+      "sourceType": "com.jwt.security.auth.jwt.JwtSettings"
+    }
+  ],
+  "hints": []
+}
